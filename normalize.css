@@ -347,3 +347,55 @@ template {
 [hidden] {
   display: none;
 }
+/* Normalize CSS with Vendor Prefix Compatibility */
+* {
+  -webkit-appearance: none;  /* Webkit (Chrome, Safari) */
+  -moz-appearance: none;     /* Firefox */
+  appearance: none;          /* Standard property */
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure consistent form element appearance */
+input,
+select,
+textarea,
+button {
+  -webkit-appearance: none;  /* Webkit */
+  -moz-appearance: none;     /* Firefox */
+  appearance: none;          /* Standard */
+  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* Additional vendor prefix considerations */
+input[type="search"] {
+  -webkit-appearance: textfield; /* Webkit search input */
+  appearance: textfield;         /* Standard */
+}
+
+/* Remove inner padding and cancel buttons in Chrome */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Consistent box-sizing */
+*, 
+*:before, 
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Improve cross-browser rendering */
+html {
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in iOS */
+  -ms-text-size-adjust: 100%;     /* Prevent font scaling in IE */
+}
