@@ -97,6 +97,77 @@ body {
     right: 0;
 }
 
+
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.gallery-container {
+    padding: 20px;
+}
+
+.gallery-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.5);
+}
+
+.caption {
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    background-color: #111;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.caption p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.caption .name {
+    font-weight: bold;
+    color: #fff;
+}
+
+.caption .date {
+    font-style: italic;
+}
+
+
 /* Rest of the content styles (same as before) */
 .header {
     padding: 20px 0;
