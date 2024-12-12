@@ -1,9 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Agave&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Navigation Styles */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100%;
+    background-color: #111;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 20px 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ccc;
+}
+
+/* Active Menu Icon Animation */
+.menu-icon.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Active Navigation Menu */
+.nav-menu.active {
+    right: 0;
 }
 
 body {
@@ -19,6 +102,7 @@ body {
     gap: 15px;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 60px;
 }
 
 .gallery-item {
